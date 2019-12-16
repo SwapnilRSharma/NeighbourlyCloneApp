@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="48dp"
+    android:background="@drawable/background">
+
+    <com.davidmiguel.dragtoclose.DragToClose
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:drag="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drag_to_close"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        drag:dragtoclose_draggableContainer="@+id/card"
+        drag:dragtoclose_draggableView="@+id/close_arrow"
+        drag:dragtoclose_closeOnClick="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/card"
+            android:layout_margin="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:background="@drawable/itembackground"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/itembackground"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="55dp">
+
+                    <ImageView
+                        android:id="@+id/close_arrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:paddingTop="20dp"
+                        android:scaleType="center" />
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginTop="2dp">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/btn_menu_opts"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:padding="8dp"
+                                    android:visibility="gone"
+                                    android:src="@drawable/ic_more_vert_black_24dp" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/iv_questnr_dp"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/btn_menu_opts"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    android:layout_marginLeft="8dp" />
+
+                                <TextView
+                                    android:id="@+id/tv_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/btn_menu_opts"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_toEndOf="@+id/iv_questnr_dp"
+                                    android:textSize="16sp"
+                                    android:text="Pavan Kumar" />
+
+                                <TextView
+                                    android:id="@+id/tv_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/btn_menu_opts"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_toEndOf="@+id/tv_name"
+                                    android:textSize="11sp"
+                                    android:text="2 days ago" />
+
+                                <TextView
+                                    android:id="@+id/tv_location"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tv_name"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toEndOf="@+id/iv_questnr_dp"
+                                    android:drawableStart="@drawable/ic_location_on_black_24dp"
+                                    android:textSize="14sp"
+                                    android:text="Hyderabad" />
+
+                                <TextView
+                                    android:id="@+id/tv_question"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/iv_questnr_dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="-7dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_toEndOf="@+id/iv_questnr_dp"
+                                    android:text="Any one knows any good shops for metal frame bed in and around hyderabad?"
+                                    android:textColor="@color/textcolor"
+                                    android:textSize="20sp" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/iv_answr_dp"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/tv_question"
+                                    android:layout_marginTop="7dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    android:layout_marginLeft="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_name_ans"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_question"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_toEndOf="@+id/iv_questnr_dp"
+                                    android:gravity="center"
+                                    android:text="Pavan Kumar"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_count2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_question"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_toEndOf="@+id/tv_name_ans"
+                                    android:textSize="12sp"
+                                    android:text="2 days ago" />
+
+                                <TextView
+                                    android:id="@+id/tv_ans"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_name_ans"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp"
+                                    android:text="you can check home town, they have good options of metal beds."
+                                    android:textColor="@color/textcolor"
+                                    android:textSize="14sp" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_no.of_ans"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_ans"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:text="3 Answers" />
+
+                                <View
+                                    android:id="@+id/vw_seperator"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="8dp"
+                                    android:layout_below="@+id/tv_no.of_ans"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:background="#25000000" />
+
+                                <TextView
+                                    android:id="@+id/btn_save"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/vw_seperator"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@android:color/transparent"
+                                    android:drawableStart="@drawable/ic_star_black_24dp"
+                                    android:drawablePadding="5dp"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Save" />
+
+                                <TextView
+                                    android:id="@+id/btn_like"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/vw_seperator"
+                                    android:layout_centerInParent="true"
+                                    android:background="@android:color/transparent"
+                                    android:drawableStart="@drawable/ic_thumb_up_black_24dp"
+                                    android:drawablePadding="5dp"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Like" />
+
+                                <TextView
+                                    android:id="@+id/btn_answer"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/vw_seperator"
+                                    android:layout_alignEnd="@+id/vw_seperator"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@android:color/transparent"
+                                    android:drawableStart="@drawable/ic_message_black_24dp"
+                                    android:drawablePadding="5dp"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:text="Answer" />
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/iv_answr_dp1"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/btn_answer"
+                                    android:layout_marginTop="7dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    android:layout_marginLeft="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_name_ans1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/btn_answer"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp1"
+                                    android:gravity="center"
+                                    android:text="Pavan Kumar"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_count21"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/btn_answer"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_toEndOf="@+id/tv_name_ans1"
+                                    android:textSize="12sp"
+                                    android:text="2 days ago" />
+                                <TextView
+                                    android:id="@+id/tv_location1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tv_name_ans1"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toEndOf="@+id/iv_questnr_dp"
+                                    android:drawableStart="@drawable/ic_location_on_black_24dp"
+                                    android:textSize="14sp"
+                                    android:text="Hyderabad" />
+
+                                <TextView
+                                    android:id="@+id/tv_ans1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_location1"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp1"
+                                    android:text="you can check home town, they have good options of metal beds."
+                                    android:textColor="@color/textcolor"
+                                    android:textSize="14sp" />
+
+                                <View
+                                    android:id="@+id/vw_seperator1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="8dp"
+                                    android:layout_below="@+id/tv_ans1"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:background="#25000000" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/iv_answr_dp2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/vw_seperator1"
+                                    android:layout_marginTop="7dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    android:layout_marginLeft="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_name_ans2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/vw_seperator1"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp2"
+                                    android:gravity="center"
+                                    android:text="Pavan Kumar"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_count212"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/vw_seperator1"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_toEndOf="@+id/tv_name_ans2"
+                                    android:textSize="12sp"
+                                    android:text="2 days ago" />
+                                <TextView
+                                    android:id="@+id/tv_location12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tv_name_ans2"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp2"
+                                    android:drawableStart="@drawable/ic_location_on_black_24dp"
+                                    android:textSize="14sp"
+                                    android:text="Hyderabad" />
+
+                                <TextView
+                                    android:id="@+id/tv_ans12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_location12"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp2"
+                                    android:text="you can check home town, they have good options of metal beds."
+                                    android:textColor="@color/textcolor"
+                                    android:textSize="14sp" />
+
+                                <View
+                                    android:id="@+id/vw_seperator2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="8dp"
+                                    android:layout_below="@+id/tv_ans12"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:background="#25000000" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/iv_answr_dp3"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/vw_seperator2"
+                                    android:layout_marginTop="7dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    android:layout_marginLeft="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_name_ans3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/vw_seperator2"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp3"
+                                    android:gravity="center"
+                                    android:text="Pavan Kumar"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_count213"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/vw_seperator2"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_toEndOf="@+id/tv_name_ans3"
+                                    android:textSize="12sp"
+                                    android:text="2 days ago" />
+                                <TextView
+                                    android:id="@+id/tv_location13"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tv_name_ans3"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp3"
+                                    android:drawableStart="@drawable/ic_location_on_black_24dp"
+                                    android:textSize="14sp"
+                                    android:text="Hyderabad" />
+
+                                <TextView
+                                    android:id="@+id/tv_ans13"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_location13"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp3"
+                                    android:text="you can check home town, they have good options of metal beds."
+                                    android:textColor="@color/textcolor"
+                                    android:textSize="14sp" />
+                                <View
+                                    android:id="@+id/vw_seperator3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="8dp"
+                                    android:layout_below="@+id/tv_ans13"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:background="#25000000" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/iv_answr_dp4"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/vw_seperator3"
+                                    android:layout_marginTop="7dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    android:layout_marginLeft="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_name_ans4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/vw_seperator3"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp4"
+                                    android:gravity="center"
+                                    android:text="Pavan Kumar"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_count214"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/vw_seperator3"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_toEndOf="@+id/tv_name_ans4"
+                                    android:textSize="12sp"
+                                    android:text="2 days ago" />
+                                <TextView
+                                    android:id="@+id/tv_location14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tv_name_ans4"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp4"
+                                    android:drawableStart="@drawable/ic_location_on_black_24dp"
+                                    android:textSize="14sp"
+                                    android:text="Hyderabad" />
+
+                                <TextView
+                                    android:id="@+id/tv_ans14"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_location14"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp4"
+                                    android:text="you can check home town, they have good options of metal beds."
+                                    android:textColor="@color/textcolor"
+                                    android:textSize="14sp" />
+
+                                <View
+                                    android:id="@+id/vw_seperator4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="8dp"
+                                    android:layout_below="@+id/tv_ans14"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:background="#25000000" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/iv_answr_dp5"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/vw_seperator4"
+                                    android:layout_marginTop="7dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    android:layout_marginLeft="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_name_ans5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/vw_seperator4"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp5"
+                                    android:gravity="center"
+                                    android:text="Pavan Kumar"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_count215"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/vw_seperator4"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_toEndOf="@+id/tv_name_ans5"
+                                    android:textSize="12sp"
+                                    android:text="2 days ago" />
+                                <TextView
+                                    android:id="@+id/tv_location15"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tv_name_ans5"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp5"
+                                    android:drawableStart="@drawable/ic_location_on_black_24dp"
+                                    android:textSize="14sp"
+                                    android:text="Hyderabad" />
+
+                                <TextView
+                                    android:id="@+id/tv_ans15"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_location15"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp5"
+                                    android:text="you can check home town, they have good options of metal beds."
+                                    android:textColor="@color/textcolor"
+                                    android:textSize="14sp" />
+
+                                <View
+                                    android:id="@+id/vw_seperator5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="8dp"
+                                    android:layout_below="@+id/tv_ans15"
+                                    android:layout_marginTop="6dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:background="#25000000" />
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/iv_answr_dp6"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_below="@+id/vw_seperator5"
+                                    android:layout_marginTop="7dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_launcher_background"
+                                    android:layout_marginLeft="8dp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_name_ans6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/vw_seperator5"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp6"
+                                    android:gravity="center"
+                                    android:text="Pavan Kumar"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/tv_count216"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/vw_seperator5"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="14dp"
+                                    android:layout_toEndOf="@+id/tv_name_ans6"
+                                    android:textSize="12sp"
+                                    android:text="2 days ago" />
+                                <TextView
+                                    android:id="@+id/tv_location16"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tv_name_ans6"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp6"
+                                    android:drawableStart="@drawable/ic_location_on_black_24dp"
+                                    android:textSize="14sp"
+                                    android:text="Hyderabad" />
+
+                                <TextView
+                                    android:id="@+id/tv_ans16"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tv_location16"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_toEndOf="@+id/iv_answr_dp6"
+                                    android:text="you can check home town, they have good options of metal beds."
+                                    android:textColor="@color/textcolor"
+                                    android:textSize="14sp" />
+
+
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </ScrollView>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.7"
+                    android:background="@drawable/button_background"
+                    android:layout_alignParentBottom="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/circluar_image"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:src="@drawable/ic_launcher_background"
+                            android:visibility="gone" />
+
+                        <EditText
+                            android:id="@+id/et_cmnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:layout_marginLeft="10dp"
+                            android:background="@android:color/transparent"
+                            android:hint="Comment"
+                            android:textColorHint="#ffffff"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/img_cmnt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.4"
+                            android:src="@drawable/ic_mic_black_24dp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/send"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/ic_send_black_24dp"
+                            android:visibility="gone" />
+
+
+                        <TextView
+                            android:id="@+id/answer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Answer"
+                            android:visibility="visible"
+                            android:textColor="#ffffff"
+                            android:textSize="21sp"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.davidmiguel.dragtoclose.DragToClose>
+
+</LinearLayout>

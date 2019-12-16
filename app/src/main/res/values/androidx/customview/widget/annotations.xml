@@ -1,0 +1,5 @@
+<root>
+    <item name='androidx.customview.widget.ViewDragHelper'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

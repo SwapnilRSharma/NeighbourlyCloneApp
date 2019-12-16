@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="18dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/btn_menu_opts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="8dp"
+                android:src="@drawable/ic_more_vert_black_24dp"
+                android:layout_marginLeft="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="8dp"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivPostProfileImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    android:layout_marginLeft="8dp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+
+
+                    <!--TextView
+                        android:id="@+id/tvPostName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        tools:text="Pavan"
+                        android:textColor="#9FA8DA"
+                        android:layout_marginLeft="12dp"
+                        /-->
+
+                    <TextView
+                        android:id="@+id/tvPostTime"
+                        android:textColor="#9FA8DA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Pavan | 2 days ago"
+                        android:layout_marginLeft="6dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_location_on_black_24dp"
+                        android:textSize="12sp"
+                        tools:text="Hyderabad"
+                        android:textColor="#9FA8DA"
+                        android:layout_below="@id/tvPostTime"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:gravity="center"
+                android:textAlignment="textStart"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="12dp"
+                android:text="Any one knows any good metal frame bed in and around hyderabad?"
+                android:textColor="@color/textcolor"
+                android:textSize="18sp"
+                tools:ignore="RtlCompat" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#ECEFF1"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:layout_marginTop="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="8dp"
+                    >
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ivPostProfileImage1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background"
+                        android:layout_marginLeft="8dp"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+
+                        <!--TextView
+                            android:id="@+id/tvPostName1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:textColor="#9FA8DA"
+                            android:textSize="12sp"
+                            tools:text="Pavan" /-->
+
+                        <TextView
+                            android:id="@+id/tvPostTime1"
+                            android:textColor="#9FA8DA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:text="Amit Shah| 2 days ago"
+                            android:layout_marginLeft="6dp"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="your interest?"
+                    android:textColor="@color/textcolor"
+                    android:textSize="18sp"
+                    tools:ignore="RtlCompat"
+                    android:paddingLeft="50dp" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/tv_no.of_ans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="5dp"
+                android:layout_gravity="end"
+                android:paddingRight="14dp"
+                android:text="25 Likes | 12 Answers" />
+
+            <View
+                android:id="@+id/vw_seperator"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_margin="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#25000000" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="0dp">
+
+                <TextView
+                    android:id="@+id/btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_star_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:layout_alignParentLeft="true"
+                    android:padding="8dp"
+                    android:text="Save"
+                    android:textColor="#7986CB"/>
+
+                <TextView
+                    android:id="@+id/btn_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerInParent="true"
+                    android:background="@android:color/transparent"
+                    android:drawableStart="@drawable/ic_thumb_up_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:textColor="#7986CB"
+                    android:text="Like" />
+
+                <TextView
+                    android:id="@+id/btn_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_alignParentEnd="true"
+                    android:drawableStart="@drawable/ic_message_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:layout_gravity="right"
+                    android:padding="8dp"
+                    android:textColor="#7986CB"
+                    android:text="Answer" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

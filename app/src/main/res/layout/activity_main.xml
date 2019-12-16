@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="centerCrop"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_launcher_background"
+                />
+
+            <ImageView
+                android:id="@+id/ivLocation"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/circle"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_location_on_black_24dp"
+                android:layout_toRightOf="@id/ivProfile"
+                android:padding="6dp"
+                />
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_toRightOf="@id/ivLocation"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:padding="6dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/circle"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_search_black_24dp"
+                />
+            <TextView
+                android:id="@+id/btn_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POST"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:padding="10dp"
+                android:drawablePadding="11dp"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/ic_add_box_black_24dp"
+                android:background="@drawable/rect"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                />
+
+            <TextView
+                android:id="@+id/btPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="POST"
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:padding="10dp"
+                android:drawablePadding="11dp"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/ic_add_box_black_24dp"
+                android:background="@drawable/rect"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                />
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView"
+        />
+
+
+</LinearLayout>
